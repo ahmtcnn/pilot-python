@@ -1,0 +1,5 @@
+# AppSec pipeline manifest — vibecoder bunu commit'ler, pipeline buna göre çalışır.
+language: python
+port: 5000
+health_endpoint: /
+dast: true
