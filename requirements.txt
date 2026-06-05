@@ -1,4 +1,5 @@
 # Kasıtlı eski sürümler — Trivy bunları CVE olarak raporlamalı.
-# Çok eski paketler modern pip ile build edilemiyordu, biraz daha yeni ama hâlâ vulnerable sürümler.
+# MarkupSafe<2.1 çünkü eski Jinja2 yeni MarkupSafe ile uyumsuz (soft_unicode kaldırıldı).
 Flask==1.1.4
 PyYAML==5.3.1
+MarkupSafe<2.1
