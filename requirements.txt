@@ -1,8 +1,4 @@
 # Kasıtlı eski sürümler — Trivy bunları CVE olarak raporlamalı.
-# urllib3 ve requests çıkarıldı çünkü dep resolution çakışıyordu.
-Flask==1.0
-Jinja2==2.10
-Werkzeug==0.14.1
-PyYAML==3.13
-itsdangerous==0.24
-MarkupSafe==1.0
+# Çok eski paketler modern pip ile build edilemiyordu, biraz daha yeni ama hâlâ vulnerable sürümler.
+Flask==1.1.4
+PyYAML==5.3.1
