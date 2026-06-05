@@ -4,6 +4,12 @@ name: Security
 on:
   push:
 
+# Caller MUST grant permissions that reusable workflow requests
+permissions:
+  contents: read
+  statuses: write
+  actions: read
+
 jobs:
   appsec:
     # NOT: Burayı kendi GitHub org/user'ına göre değiştir.
