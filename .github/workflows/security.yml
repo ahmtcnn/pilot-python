@@ -1,0 +1,20 @@
+name: Security
+
+# Sadece push'ta — istek üzerine
+on:
+  push:
+
+jobs:
+  appsec:
+    # NOT: Burayı kendi GitHub org/user'ına göre değiştir.
+    # Kurumsal GH'ta: <ORG>/appsec-workflows/...@main
+    uses: ahmtcnn/appsec-workflows/.github/workflows/security-reusable.yml@main
+    with:
+      enable_container_scan: true
+      enable_dast: true
+      dast_target: 'http://localhost:5000'
+      dast_start_command: 'docker run -d --rm -p 5000:5000 --name pilot-py local/app:test'
+      dast_wait_seconds: 15
+      critical_threshold: 0
+      high_threshold: 5
+      soft_fail: true
