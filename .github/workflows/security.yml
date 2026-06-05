@@ -19,7 +19,7 @@ jobs:
       enable_container_scan: true
       enable_dast: true
       dast_target: 'http://localhost:5000'
-      dast_start_command: 'docker run -d --rm -p 5000:5000 --name pilot-py local/app:test'
+      dast_start_command: 'docker run -d -p 5000:5000 --name pilot-py local/app:test'
       dast_wait_seconds: 15
       critical_threshold: 0
       high_threshold: 5
